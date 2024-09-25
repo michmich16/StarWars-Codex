@@ -6,17 +6,17 @@
     background-color: $dark;
     color: $numbers;
     ul{
+        display: grid;
+        grid-template-columns: 1fr;
         li{
-            display: flex;
-        flex-direction: row;
-        a{
-            text-decoration: none;
-            color: $primaryText;
             cursor: pointer;
+            list-style-type: none;
             padding: 9px 9px 9px 9px;
-        }
+            color: $primaryText;
+   
         span{
             padding: 9px 9px 9px 9px;
+            color: $numbers;
         }
         }
     }

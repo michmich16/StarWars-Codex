@@ -4,6 +4,7 @@ import { Films } from "./pages/FilmPage";
 import { Character } from "./pages/CharacterPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
+
 function App() {
   const queryClient = new QueryClient();
 
