@@ -1,6 +1,12 @@
-export const MainLayout = () =>{
+import React from "react";
+import { Outlet } from "react-router-dom";
+import { Navbar } from "../components/Navbar/Navbar";
 
-    return(
-        <></>
-    )
-}
+export const MainLayout = () => {
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+    </>
+  );
+};

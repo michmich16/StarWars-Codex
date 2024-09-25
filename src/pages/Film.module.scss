@@ -1,0 +1,23 @@
+@import './../helper/color.scss';
+@import './../helper/mixin.scss';
+.AllFilm{
+    width: 60%;
+    margin-left: 20%;
+    background-color: $dark;
+    color: $numbers;
+    ul{
+        li{
+            display: flex;
+        flex-direction: row;
+        a{
+            text-decoration: none;
+            color: $primaryText;
+            cursor: pointer;
+            padding: 9px 9px 9px 9px;
+        }
+        span{
+            padding: 9px 9px 9px 9px;
+        }
+        }
+    }
+}

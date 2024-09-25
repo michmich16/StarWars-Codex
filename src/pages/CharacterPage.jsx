@@ -3,6 +3,7 @@ import React from "react";
 import { request } from "graphql-request";
 import { allCharacters } from "../allCharacters";
 import { Link } from "react-router-dom";
+import style from './CharacterPage.module.scss';
 
 export const CharacterPage = () => {
     const { data, isLoading, error } = useQuery({
@@ -26,11 +27,11 @@ export const CharacterPage = () => {
 
     return (
         <div>
-            {data?.allCharacters.people.map((item) =>{
+            {data?.allPeople.people.map((item) =>{
                 return(
                         <li>
                         <Link to={`characters/${item.id}`} key={item.name}>
-                            {item.title}
+                            {item.name}
                         </Link>
                     </li>
                     );
