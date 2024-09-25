@@ -28,8 +28,13 @@ export const CharacterPage = () => {
         <div>
             {data?.allCharacters.people.map((item) =>{
                 return(
-                    <></>
-                )
+                        <li>
+                        <Link to={`characters/${item.id}`} key={item.name}>
+                            {item.title}
+                        </Link>
+                    </li>
+                    );
+              
             })}
         </div>
     )
