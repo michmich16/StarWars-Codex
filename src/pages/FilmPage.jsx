@@ -9,12 +9,16 @@ import { useNavigate } from "react-router-dom";
 import ModalPage from "../components/Modal/Modal";
 import image1 from './../assets/ZmlsbXM6MQ==.jpg';
 import image2 from './../assets/ZmlsbXM6Mg==.jpg';
+import image3 from './../assets/ZmlsbXM6Mw==.jpg';
+import image4 from './../assets/ZmlsbXM6NA==.jpeg';
+import image5 from './../assets/ZmlsbXM6NQ==.jpeg';
+import image6 from './../assets/ZmlsbXM6Ng==.jpg';
+
 
 
 
 export const Films = () => {
 
-  
   const [selectedFilm, setSelectedFilm] = useState(null); 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -51,33 +55,31 @@ export const Films = () => {
   const imageArray = [
     image1,
     image2,
-    image1,
-    image1,
-    image2
+    image3,
+    image4,
+    image5,
+    image6
    
   ];
 
   
 
-
   return (
     <>
-    <div  className={style.AllFilm}>
+    <div className={style.AllFilm}>
         <ul>
-            {data.allFilms.films.map((item) => {
+            {data.allFilms.films.map((item, index) => {
              
                 return (
+                <div>
                     <li key={item.id}>
-                       {console.log(item.id)}
-              
-                        {item.title}
-                        {imageArray.map((image, index) => (
-                     <img key={index} src={image} alt={`Image ${index + 1}`} />
-                        ))}
+                        <img key={index} src={imageArray[index]} />
+                         <h3>{item.title}</h3>
                         <span >{item.releaseDate.slice(0, 4)}</span>
-                        <p>{item.id}.jpg</p>
-                        <button onClick={() => openModal(item.id)}>View Details</button>
+                        <button  onClick={() => openModal(item.id)}>View Details</button>
                     </li>
+                    
+                  </div>
                 );
             })}
       </ul>
