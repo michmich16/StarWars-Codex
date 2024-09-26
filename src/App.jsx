@@ -4,7 +4,7 @@ import { MainLayout } from "./layouts/MainLayout";
 import { FilmPage } from "./pages/FilmPage";
 import { CharacterPage } from "./pages/CharacterPage";
 import './App.scss'
-import Footer from "./components/Footer/Footer";
+
 
 function App() {
   const queryClient = new QueryClient();
