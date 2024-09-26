@@ -1,18 +1,22 @@
 @import './../helper/color.scss';
 @import './../helper/mixin.scss';
 .AllFilm{
-    width: 60%;
-    margin-left: 20%;
+    width: 90%;
+    margin-left: 5%;
     background-color: $dark;
     color: $numbers;
     ul{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3 1fr);
+        gap: 1rem;
         li{
             cursor: pointer;
             list-style-type: none;
             padding: 9px 9px 9px 9px;
             color: $primaryText;
+            img{
+                width: 30%;
+            }
    
         span{
             padding: 9px 9px 9px 9px;
