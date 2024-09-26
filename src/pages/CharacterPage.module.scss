@@ -1,0 +1,19 @@
+.characterStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+    li {
+        list-style: none;
+        text-align: center;
+        padding: 1rem 2rem;
+        background-color: rgb(174, 179, 178);
+        margin: 2rem 3rem;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
