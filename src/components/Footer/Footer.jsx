@@ -9,6 +9,8 @@ export const Footer = () => {
       <div className={styles.copyright}>
         <p>&copy; 2024 StarWars Codex GraphQL Projekt. </p>
         <p>Udviklet af: Omid, Michael og Rolf</p>
+        <p className={styles.logoFooter}>Star Wars</p>
+        <p>- May The Force Be With You -</p>
       </div>
 		</footer>
 	);
