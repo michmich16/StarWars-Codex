@@ -1,0 +1,11 @@
+@import './../../helper/color.scss';
+@import './../../helper/mixin.scss';
+
+.modal{
+    width: 60%;
+    margin-left: 20%;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    background-color: $button;
+}

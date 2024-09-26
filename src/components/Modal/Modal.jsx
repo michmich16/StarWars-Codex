@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import request from 'graphql-request';
 import { singleFilm } from '../../singleFilm';
+import style from './Modal.module.scss';
 
 
 const ModalPage = ({ film, handleClose }) => {
@@ -34,7 +35,7 @@ const ModalPage = ({ film, handleClose }) => {
   
 
   return (
-    <div className="modal">
+    <div className={style.modal}>
       <div className="modal-content">
         <h2>{data.film.title}</h2>
         <p>{data.film.openingCrawl}</p>
