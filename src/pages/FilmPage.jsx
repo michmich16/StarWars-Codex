@@ -6,13 +6,24 @@ import { Link } from "react-router-dom";
 import style from './Film.module.scss';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import ModalPage from "../components/Modal/Modal";
+
+
 
 export const Films = () => {
-  const navigate = useNavigate();
+  const [selectedFilm, setSelectedFilm] = useState(null); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openFilmModal = (id) => {
-    navigate(`/film/${id}`); // Navigating to Modal page with the selected film ID
+  const openModal = (film) => {
+    setSelectedFilm(film); 
+    setIsModalOpen(true);   
   };
+
+  const closeModal = () => {
+    setSelectedFilm(null);  
+    setIsModalOpen(false);  
+  };
+
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["allFilms"],
@@ -45,14 +56,14 @@ export const Films = () => {
               
                         {item.title}
                         <span >{item.releaseDate.slice(0, 4)}</span>
-                        <button onClick={() => openFilmModal(item.id)}>View Details</button>
+                        <button onClick={() => openModal(item.id)}>View Details</button>
                     </li>
                 );
             })}
       </ul>
     </div>
     <div>
-      
+    {isModalOpen && <ModalPage film={selectedFilm} handleClose={closeModal} />}
     </div>
     </>
   );
