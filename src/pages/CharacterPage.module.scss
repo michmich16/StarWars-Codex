@@ -3,17 +3,34 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-
-    li {
-        list-style: none;
+    h2{
         text-align: center;
-        padding: 1rem 2rem;
-        background-color: rgb(174, 179, 178);
-        margin: 2rem 3rem;
+        font-size: 32px;
+    }
 
-        a {
-            text-decoration: none;
-            color: black;
+    ul{
+        padding: 0;
+        padding-top: 4rem;
+        margin: 0;
+        li {
+            margin: auto;
+            list-style: none;
+            width: 50vw;
+            text-align: center;
+            padding: 1rem 2rem;
+            background-color: transparent;
+            margin-bottom: 3rem;
+            cursor: pointer;
+            h3{
+                font-family: sans-serif;
+                font-weight: 400;
+                color: white;
+                font-size: 40px;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: rgb(238, 255, 0);
+            }
         }
     }
+
+   
 }

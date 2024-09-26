@@ -9,18 +9,18 @@ import { useNavigate } from "react-router-dom";
 import { CharacterModal } from "../components/CharacterModal/CharacterModal";
 
 export const CharacterPage = () => {
-    const [selectedPerson, setSelectedPerson] = useState(null); 
+    const [selectedPerson, setSelectedPerson] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openCharacterModal = (person) => {
-        setSelectedPerson(person); 
-        setIsModalOpen(true);   
+        setSelectedPerson(person);
+        setIsModalOpen(true);
     };
 
     const closeModal = () => {
-        setSelectedPerson(null);  
-        setIsModalOpen(false);  
-      };
+        setSelectedPerson(null);
+        setIsModalOpen(false);
+    };
 
 
     const { data, isLoading, error } = useQuery({
@@ -32,7 +32,7 @@ export const CharacterPage = () => {
             )
     });
 
- 
+
 
     if (isLoading) {
         return <div>Loading......</div>;
@@ -45,15 +45,15 @@ export const CharacterPage = () => {
     return (
         <>
             <div className={style.characterStyle}>
+                <h2>Characters</h2>
                 <ul>
                     {data?.allPeople.people.map((item) => {
-                    
-                        return (
-                            <li key={item.id}>
-                                 {/* {console.log(item.id)} */}
 
-                                {item.name}
-                                <button onClick={() => openCharacterModal(item.id)}>View Details</button>
+                        return (
+                            <li key={item.id} onClick={() => openCharacterModal(item.id)}>
+                                {/* {console.log(item.id)} */}
+
+                                <h3>{item.name}</h3>
                             </li>
                         );
 
