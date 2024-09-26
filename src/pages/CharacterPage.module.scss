@@ -28,6 +28,9 @@
                 font-size: 40px;
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: rgb(238, 255, 0);
+                @media only screen and (max-width: 600px) {
+                    font-size: 28px;
+                }
             }
         }
     }
