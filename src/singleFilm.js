@@ -5,3 +5,5 @@ export const singleFilm = `query Film($filmId: ID) {
       openingCrawl
     }
   }`;
+
+

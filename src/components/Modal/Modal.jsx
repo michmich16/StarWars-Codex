@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import request from 'graphql-request';
@@ -31,8 +31,7 @@ const ModalPage = ({ film, handleClose }) => {
     return <div>Error: {error.message}</div>;
   }
   console.log(data);
-
-
+  
 
   return (
     <div className="modal">
@@ -46,3 +45,4 @@ const ModalPage = ({ film, handleClose }) => {
 };
 
 export default ModalPage;
+

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React from "react";
+import React, { useEffect } from 'react';
 import { request } from "graphql-request";
 import { allFilms } from "../allFilms";
 import { Link } from "react-router-dom";
@@ -8,9 +8,15 @@ import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import ModalPage from "../components/Modal/Modal";
 
+import image1 from './../assets/ZmlsbXM6MQ==.jpg';
+import image2 from './../assets/ZmlsbXM6Mg==.jpg';
+
 
 
 export const Films = () => {
+
+
+  
   const [selectedFilm, setSelectedFilm] = useState(null); 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -44,6 +50,18 @@ export const Films = () => {
     return <div>Error: {error.message}</div>;
   }
 
+  
+  const imageArray = [
+    image1,
+    image2,
+    image1,
+    image1,
+    image2
+   
+  ];
+
+  
+
   return (
     <>
     <div  className={style.AllFilm}>
@@ -55,7 +73,11 @@ export const Films = () => {
                        {console.log(item.id)}
               
                         {item.title}
+                        {imageArray.map((image, index) => (
+                     <img key={index} src={image} alt={`Image ${index + 1}`} />
+                        ))}
                         <span >{item.releaseDate.slice(0, 4)}</span>
+                        <p>{item.id}.jpg</p>
                         <button onClick={() => openModal(item.id)}>View Details</button>
                     </li>
                 );
