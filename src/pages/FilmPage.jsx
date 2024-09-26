@@ -7,12 +7,14 @@ import style from './Film.module.scss';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import ModalPage from "../components/Modal/Modal";
+
 import image1 from './../assets/ZmlsbXM6MQ==.jpg';
 import image2 from './../assets/ZmlsbXM6Mg==.jpg';
 
 
 
 export const Films = () => {
+
 
   
   const [selectedFilm, setSelectedFilm] = useState(null); 
@@ -47,6 +49,7 @@ export const Films = () => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
+
   
   const imageArray = [
     image1,
@@ -58,7 +61,6 @@ export const Films = () => {
   ];
 
   
-
 
   return (
     <>

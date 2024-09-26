@@ -31,7 +31,6 @@ const ModalPage = ({ film, handleClose }) => {
     return <div>Error: {error.message}</div>;
   }
   console.log(data);
-
   
 
   return (
@@ -46,3 +45,4 @@ const ModalPage = ({ film, handleClose }) => {
 };
 
 export default ModalPage;
+
