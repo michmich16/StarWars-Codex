@@ -15,8 +15,6 @@ import image5 from './../assets/ZmlsbXM6NQ==.jpeg';
 import image6 from './../assets/ZmlsbXM6Ng==.jpg';
 
 
-
-
 export const Films = () => {
 
   const [selectedFilm, setSelectedFilm] = useState(null); 
@@ -51,6 +49,7 @@ export const Films = () => {
   if (error) {
     return <div>Error: {error.message}</div>;
   }
+
   
   const imageArray = [
     image1,
