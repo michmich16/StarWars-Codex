@@ -5,14 +5,14 @@ import { allFilms } from "../allFilms";
 import { Link } from "react-router-dom";
 import style from './Film.module.scss';
 import { useState } from 'react';
-import Modal from "../components/Modal/Modal";
+import { useNavigate } from "react-router-dom";
 
 export const Films = () => {
-    // Modal start
-  const [isModalOpen, setModalOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const openFilmModal = (id) => {
+    navigate(`/film/${id}`); // Navigating to Modal page with the selected film ID
+  };
 
   const { data, isLoading, error } = useQuery({
     queryKey: ["allFilms"],
@@ -38,11 +38,14 @@ export const Films = () => {
     <div  className={style.AllFilm}>
         <ul>
             {data.allFilms.films.map((item) => {
+             
                 return (
-                    <li onClick={() => setModalOpen(true)} to={`search/${item.id}`} key={item.title}>
+                    <li key={item.id}>
+                       {console.log(item.id)}
+              
                         {item.title}
-                    
                         <span >{item.releaseDate.slice(0, 4)}</span>
+                        <button onClick={() => openFilmModal(item.id)}>View Details</button>
                     </li>
                 );
             })}
@@ -50,10 +53,6 @@ export const Films = () => {
     </div>
     <div>
       
-      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <h2></h2>
-        <p>Modal Content</p>
-      </Modal>
     </div>
     </>
   );
