@@ -1,0 +1,57 @@
+.modalStyle {
+    position: fixed;
+    overflow:hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    .modalContent {
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      background-color: aliceblue;
+      
+      h2 {
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        margin: 0.5rem 0;
+      }
+  
+      .buttonStyle {
+        margin-top: 1rem;
+        padding: 2rem 2rem;
+        background-color: #2c2c2c;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #000000;
+        }
+      }
+    }
+  }
+  .blur-background {
+    filter: blur(8px);
+  }
+
+
+  @media (max-width: 768px) {
+    .modalStyle{
+      .modalContent{
+        padding: 2rem;
+        width: 20rem;
+      }
+    }
+  }

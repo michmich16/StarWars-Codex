@@ -1,0 +1,66 @@
+@import './../../helper/color.scss';
+@import './../../helper/mixin.scss';
+@font-face {
+    font-family: 'StarWar';
+    src: url('./../assets/font/Starjhol.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    @media(max-width:600px) {
+        height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+  }
+ 
+  figure{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @media(max-width:600px) {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+  }
+.header {
+    margin: 0;
+    padding: 0;
+    @media(max-width:600px) {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    img{
+        width: 100%;
+        @media(max-width:600px) {
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+        }
+    }
+    h1{
+        color: $Title;
+        font-size: 100px;
+        position: absolute;
+        top: 10%;
+        width: 50%;
+        margin-left: 25%;
+        text-align: center;
+        background-image: linear-gradient(to right, blue, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-family: 'StarWar', sans-serif;
+        @media(max-width:600px) {
+            top: 5%;
+            width: 50%;
+            margin-left: 25%;
+            font-size: 30px;
+        }
+    }
+ 
+}

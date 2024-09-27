@@ -1,0 +1,75 @@
+@import './../helper/color.scss';
+@import './../helper/mixin.scss';
+ 
+@font-face {
+    font-family: 'StarWar';
+    src: url('./../assets/font/Starjhol.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+ 
+.AllFilm{
+    width: 90%;
+    margin-left: 5%;
+    background-color: $dark;
+    color: $numbers;
+    @media(max-width:600px) {
+        width: 100%;
+        margin-left: 0;
+        
+    }
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        @media(max-width:600px) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        div{
+            @media(max-width:600px){
+                margin: 0;
+                padding: 0;
+            }
+        }
+ 
+        li{
+            cursor: pointer;
+            list-style-type: none;
+            padding: 9px 9px 9px 9px;
+            color: $primaryText;
+            display: grid;
+            grid-template-columns: 1fr;
+            img{
+                width: 70%;
+                margin-left: 15%;
+                max-height: 300px;
+                @media(max-width:600px) {
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+                padding: 0;
+                }
+            }
+            h3{
+                text-align: center;
+                font-family: 'StarWar', sans-serif;
+            }
+        span{
+            padding: 0 9px 9px 9px;
+            color: $numbers;
+            text-align: center;
+        }
+        button{
+            width: 40%;
+            margin-left: 30%;
+            height: 30px;
+            border: none;
+            border-radius: 9px;
+            background-color: $button;
+            cursor: pointer;
+        }
+        }
+    }
+}

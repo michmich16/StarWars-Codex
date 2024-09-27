@@ -1,0 +1,39 @@
+.footer {
+    margin-top: 5rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+
+    .divider {
+        border: 1px solid #5c5c5c;
+        opacity: 0.63;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 25px;
+        color: #ffffff;
+        margin-top: 20px;
+
+        .logoFooter{
+            font-family: 'StarWar';
+            src: url('./../assets/font/Starjhol.ttf') format('truetype');
+            font-size: 32px;
+        }
+    }
+
+  @media (max-width: 768px) {
+    .copyright {
+        text-align: center;
+        font-size: 16px;
+        color: #ffffff;
+        margin-top: 20px;
+        .logoFooter{
+            font-size: 24px;
+        }
+        
+    }
+  }
+}
