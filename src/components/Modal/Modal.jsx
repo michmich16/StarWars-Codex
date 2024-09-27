@@ -36,10 +36,10 @@ const ModalPage = ({ film, handleClose }) => {
 
   return (
     <div className={style.modal}>
-      <div className="modal-content">
+      <div className={style.modalContent}>
         <h2>{data.film.title}</h2>
         <p>{data.film.openingCrawl}</p>
-        <button onClick={handleClose}>Close</button> 
+        <button className={style.buttonStyle} onClick={handleClose}>Close</button> 
       </div>
     </div>
   );

@@ -9,11 +9,16 @@
     padding: 9px ;
     justify-content: center;
     position: fixed;
-
+    @media(max-width: 600px) {
+        max-width: 100%;
+        min-width:  100%;
+ 
+    }
     a{
         color: $light;
         text-decoration: none;
         margin: 0 12px 0 12px;
+ 
     }
    
 }

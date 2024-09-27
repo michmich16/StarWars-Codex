@@ -6,12 +6,40 @@
     font-weight: normal;
     font-style: normal;
   }
-
+  body {
+    @media(max-width:600px) {
+        height: 200px;
+        margin: 0;
+        padding: 0;
+    }
+  }
+ 
+  figure{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @media(max-width:600px) {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+  }
 .header {
     margin: 0;
     padding: 0;
+    @media(max-width:600px) {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
     img{
         width: 100%;
+        @media(max-width:600px) {
+            height: 200px;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+        }
     }
     h1{
         color: $Title;
@@ -27,6 +55,12 @@
         background-clip: text;
         text-fill-color: transparent;
         font-family: 'StarWar', sans-serif;
+        @media(max-width:600px) {
+            top: 5%;
+            width: 50%;
+            margin-left: 25%;
+            font-size: 30px;
+        }
     }
-
+ 
 }
