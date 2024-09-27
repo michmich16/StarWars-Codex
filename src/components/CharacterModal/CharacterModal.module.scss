@@ -47,4 +47,11 @@
   }
 
 
-  
+  @media (max-width: 768px) {
+    .modalStyle{
+      .modalContent{
+        padding: 2rem;
+        width: 20rem;
+      }
+    }
+  }
